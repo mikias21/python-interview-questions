@@ -9,3 +9,18 @@ def is_unique(string: str) -> bool:
 
 
 print(is_unique("abcde"))
+
+"""
+    Key points 
+    -> Questions to asks 
+        + is the string ASCII string or Unicode string 
+    -> Time complexity O(n) where n is the length of the string
+        + We can argue it can be O(1) since we will not iterate more than 128 characters 
+    -> Space complexity O(1)
+    -> Other assumptions 
+        + We can assume all characters are small letters and use bit vector which will
+            reduce the our space complexity by factor of 8.
+        + Use sort algorithm and compare each character with the neighboring one sorting take
+            O(n log(n)) with additional space
+        + Compare each Character in the string with one another which takes O(n^2) time complexity
+"""
