@@ -7,12 +7,11 @@ def replace_spaces(string: list, true_length: int):
     index: int = true_length + space_count * 2
     if(true_length < len(string)): string[true_length] = '\0'
     for i in range(true_length-1, 0):
-        if(string[i] == ' '){
+        if(string[i] == ' '):
             string[index - 1] = '0'
             string[index - 2] = '2'
             string[index - 3] = '%'
             index -= 3
-        }else{
+        else:
             string[index] = string[i]
             index -= 1
-        }
